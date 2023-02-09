@@ -24,13 +24,14 @@ if ($_SESSION["user_type"] == "new") {
     `firstname` varchar(45) NOT NULL,
     `lastname` varchar(45) NOT NULL,
     `email` varchar(45) NOT NULL,
+    `dob` varchar(45) NOT NULL,
     `mac` varchar(45) NOT NULL,
     `ip` varchar(45) NOT NULL,
     `last_updated` varchar(45) NOT NULL,
     PRIMARY KEY (`id`)
     )");
 
-    mysqli_query($con,"INSERT INTO `$table_name` (firstname, lastname, email, mac, ip, last_updated) VALUES ('$fname', '$lname', '$email', '$mac', '$ip', '$last_updated')");
+    mysqli_query($con,"INSERT INTO `$table_name` (firstname, lastname, email, dob, mac, ip, last_updated) VALUES ('$fname', '$lname', '$email', '$dob', '$mac', '$ip', '$last_updated')");
 }
 
 mysqli_close($con);
