@@ -16,6 +16,7 @@ $username="admin";
 $fname = $_POST['fname'];
 $lname = $_POST['lname'];
 $email = $_POST['email'];
+$dob = $_POST['dob'];
 
 if ($_SESSION["user_type"] == "new") {
     mysqli_query($con, "
